@@ -10,6 +10,8 @@
 #The first line of sourceFile contains the source folder where the script will look for the files.
 #The next lines consist of one file per line
 #The files to be copied must have the same basename as the file read from sourceFile
+#   clean
+#Deletes all files in sourceFile
 
 if [ $# -ne 1 ] ; then 
     echo "Usage: $0 [ git | local ]"
@@ -17,7 +19,7 @@ if [ $# -ne 1 ] ; then
 fi 
 
 
-if [ "$1" != "local" ] && [ "$1" != "git" ] ; then 
+if [ "$1" != "local" ] && [ "$1" != "git" ] && [ "$1" != "clean" ] ; then 
     echo "Invalid option"
     echo "Available options: "
     echo -e "   git : updates project's root folder"
@@ -39,10 +41,16 @@ if [ "$1" = "git" ] ; then
     do
         [ -e "$file" ] && [ -r "$file" ] && cp -r $file $dest
     done <<< $( tail -n +2 < "$sourceFile" ) 
-else
+elif [ "$1" = "local" ] ; then 
     while read file
     do
         updated="$dest/$(basename "$file")"
         [ -e "$updated" ] && [ -r "$updated" ] && cp -r "$updated" "$file"
     done <<< $( tail -n +2 < "$sourceFile" ) 
+else
+    while read file
+    do
+        file=$( basename "$file" )
+        rm -rf "$file"
+    done <<< $( tail -n +2 < "$sourceFile" )
 fi 
