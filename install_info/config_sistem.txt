@@ -1,0 +1,55 @@
+Configuraciones del sistema: 
+-bash powerline: 
+    https://www.youtube.com/watch?v=QAaT6BTUnPg
+    https://github.com/b-ryan/powerline-shell
+    sudo pacman -S neofetch 
+    sudo pacman -S python-pip
+    sudo pip install powerline-shell
+    powerline-shell --generate-config > ~/.powerline-shell.json
+    edit ~/.bashrc
+
+-spotify 
+    pamac build spotify 
+-discord 
+    sudo pacman -S discord
+-Alacritty 
+-Nautilus
+-Firefox
+-FONDOS
+    sudo pacman -S feh 
+    feh --bg-scale /ruta/al/archivo-de-imagen
+
+-AUDIO
+    añadir usuario al grupo audio: 
+        sudo gpasswd anyel audio
+        -añadir: 
+        keys= [
+                ...
+                # Sound
+                Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
+                Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
+                Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute"))
+        ]
+-BRILLO
+    sudo pacman -S brightnessctl
+        #Brightness
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+
+-Fuentes de awesome: 
+    sudo pacman -S otf-font-awesome
+
+-programa para configurar wifi: 
+    nm-connection-editor
+-bluetooth: 
+    blueman-adapters
+
+-Para que funcionen las transparencias: 
+    sudo pacman -S picom
+    editar /etc/xdg/picom.conf
+
+-virtualBox: 
+    sudo pacman -Syu virtualbox linux56-virtualbox-host-modules 
+
+-dmenu
+    sudo pacman -S dmenu

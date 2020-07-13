@@ -1,0 +1,6 @@
+#wifi
+nm-connection-editor
+#bluetooth
+blueman-adapters
+#libre-office
+libreoffice --writer %U
