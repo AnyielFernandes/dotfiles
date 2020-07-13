@@ -53,3 +53,15 @@ Configuraciones del sistema:
 
 -dmenu
     sudo pacman -S dmenu
+
+-mouse
+    sudo pacman -S libinput 
+    modificar fichero de configuración: 
+        sudo code /etc/X11/xorg.conf.d/30-touchpad.conf
+        Section "InputClass"
+            Identifier "devname"
+            Driver "libinput"
+            MatchIsTouchpad "on"
+            Option "Tapping" "on" 
+            Option "NaturalScrolling" "true"
+        EndSection
