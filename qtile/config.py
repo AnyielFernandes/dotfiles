@@ -126,11 +126,11 @@ keys = [
 
 
 ##### GROUPS #####
-group_names = [("NET", {'layout': 'max'}),
+group_names = [("WWW", {'layout': 'max'}),
                ("TERM", {'layout': 'monadtall'}),
                ("CODE", {'layout': 'max'}),
                ("FS", {'layout': 'monadtall'}),
-               ("MEDIA", {'layout': 'max'}),
+               ("MUSIC", {'layout': 'max'}),
                ("CHAT", {'layout': 'max'}),
                ("PDF", {'layout': 'stack'}),
                ("DOC", {'layout' : 'max'}),
