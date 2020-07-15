@@ -35,45 +35,44 @@ import json
 import os
 
 myTerm = "alacritty"
-mod = "mod1"
+mod = "mod4"
 
 keys = [
     ### Window controls
-         Key([mod], "k",
-             lazy.layout.down(),
-             desc='Move focus down in current stack pane'
-             ),
-         Key([mod], "i",
-             lazy.layout.up(),
-             desc='Move focus up in current stack pane'
-             ),
-         Key([mod], "l",
-             lazy.layout.right(),
-             desc='Move focus down in current stack pane'
-             ),
-         Key([mod], "j",
-             lazy.layout.left(),
-             desc='Move focus up in current stack pane'
-             ),
-         Key([mod, "shift"], "k",
-             lazy.layout.shuffle_down(),
-             desc='Move windows down in current stack'
-             ),
-         Key([mod, "shift"], "j",
-             lazy.layout.shuffle_up(),
-             desc='Move windows up in current stack'
-             ),
-         Key([mod], "o",
-             lazy.layout.grow(),
-             lazy.layout.increase_nmaster(),
-             desc='Expand window (MonadTall), increase number in master pane (Tile)'
-             ),
-         Key([mod], "u",
-             lazy.layout.shrink(),
-             lazy.layout.decrease_nmaster(),
-             desc='Shrink window (MonadTall), decrease number in master pane (Tile)'
-             ),
-
+    Key([mod], "k",
+        lazy.layout.down(),
+        desc='Move focus down in current stack pane'
+        ),
+    Key([mod], "i",
+        lazy.layout.up(),
+        desc='Move focus up in current stack pane'
+        ),
+    Key([mod], "l",
+        lazy.layout.right(),
+        desc='Move focus down in current stack pane'
+        ),
+    Key([mod], "j",
+        lazy.layout.left(),
+        desc='Move focus up in current stack pane'
+        ),
+    Key([mod, "shift"], "k",
+        lazy.layout.shuffle_down(),
+        desc='Move windows down in current stack'
+        ),
+    Key([mod, "shift"], "j",
+        lazy.layout.shuffle_up(),
+        desc='Move windows up in current stack'
+        ),
+    Key([mod], "o",
+        lazy.layout.grow(),
+        lazy.layout.increase_nmaster(),
+        desc='Expand window (MonadTall), increase number in master pane (Tile)'
+        ),
+    Key([mod], "u",
+        lazy.layout.shrink(),
+        lazy.layout.decrease_nmaster(),
+        desc='Shrink window (MonadTall), decrease number in master pane (Tile)'
+        ),
 
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next()),
@@ -102,9 +101,9 @@ keys = [
 
     # Swap panes of split stack
     Key([mod, "shift"], "space", lazy.layout.rotate()),
-
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
+    Key([mod,"control"],"Escape",lazy.spawn("telinit 0")),
     Key([mod], "r", lazy.spawn("dmenu_run")),
 
     # Sound
@@ -310,9 +309,10 @@ screens = [
                         notify_below = 0.15,
                         fontsize = 14,
                         format = '{char} {percent:2.0%}', 
+                        update_interval = 1,
                         **background_B
                 ),
-                
+    
                 widget.TextBox(
                        text = '',
                        background = colors[5],

@@ -65,3 +65,12 @@ Configuraciones del sistema:
             Option "Tapping" "on" 
             Option "NaturalScrolling" "true"
         EndSection
+
+
+https://wiki.archlinux.org/index.php/Desktop_notifications_(Espa%C3%B1ol)
+
+-Notificación de batería baja: 
+	instalar libnotify
+	añadir todas las variables de entorno en /etc/cron.d/<fichero> 
+	Para que funcionase el comando se ejecuta como usuario normal a través de
+	sudo. Por ello son importantes las variables de entorno. 
