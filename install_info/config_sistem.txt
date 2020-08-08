@@ -77,3 +77,12 @@ https://wiki.archlinux.org/index.php/Desktop_notifications_(Espa%C3%B1ol)
 
 -Backups gestinonadas mediante timeshift. 
 	Para abrir el entorno gráfico: sudo timeshift-gtk
+
+-Configuración de múltiples monitores con xranrd:
+configuración gráfica con arandr 
+ejemplo de configuración en terminal: xrandr --output eDP1 --primary --mode 1366x768 --pos 233x1080 --rotate normal --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal #las posiciones no son las correctas. 
+Si los cambios no se actualizan en qtile, o las pantallas no aparecen de manera independiente, reiniciar qtile. 
+
+
+
+

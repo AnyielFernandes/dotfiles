@@ -106,6 +106,9 @@ keys = [
     Key([mod,"control"],"Escape",lazy.spawn("telinit 0")),
     Key([mod], "r", lazy.spawn("dmenu_run")),
 
+    #Monitor commands: 
+    Key([mod], "Escape", lazy.next_screen() ),
+
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 3- unmute")),
@@ -117,6 +120,7 @@ keys = [
     #Brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+    Key([mod],"F1", lazy.spawn("bash /home/anyel/.config/qtile/scripts/HDMI1_brightness.sh ")),
 
     #Bar
     Key([mod], "BackSpace" , lazy.hide_show_bar("top")),
@@ -396,6 +400,195 @@ screens = [
             24,
         ),
     ),
+
+    # Screen 2 
+    Screen(
+        top=bar.Bar(
+            [
+                widget.Sep(
+                        linewidth = 0,
+                        padding = 6,
+                        foreground = colors[2],
+                        background = colors[0]
+                        ),
+                widget.GroupBox(
+                        font = "Ubuntu Bold",
+                        fontsize = 10,
+                        margin_y = 3,
+                        margin_x = 0,
+                        padding_y = 5,
+                        padding_x = 3,
+                        borderwidth = 3,
+                        active = colors[2],
+                        inactive = colors[7],
+                        rounded = True,
+                        highlight_color = colors[1],
+                        highlight_method = "line",
+                        this_current_screen_border = colors[3],
+                        this_screen_border = colors [4],
+                        other_current_screen_border = colors[0],
+                        other_screen_border = colors[0],
+                        foreground = colors[2],
+                        background = colors[0]
+                        ),
+                widget.Prompt(),
+                widget.Sep(
+                        linewidth = 0,
+                        padding = 40,
+                        foreground = colors[2],
+                        background = colors[0]
+                        ),
+                widget.WindowName( foreground = colors[6], background = colors[0], padding = 0, show_state = False ),
+                
+                widget.TextBox(
+                       text = '',
+                       background = colors[0],
+                       foreground = colors[4],
+                       padding = -1,
+                       fontsize = 50
+                       ),
+                widget.CurrentLayoutIcon(
+                        scale = 0.7, 
+                        **background_A
+                        ),
+
+                widget.TextBox(
+                       text = '',
+                       background = colors[4],
+                       foreground = colors[5],
+                       padding = -1,
+                       fontsize = 50
+                       ),
+
+                widget.TextBox(
+                        text = "  ",
+                        padding = 0,
+                        fontsize = 15, 
+                        mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('nm-connection-editor')},
+                        **background_B
+
+                ),
+
+                widget.TextBox(
+                       text = '',
+                       background = colors[5],
+                       foreground = colors[4],
+                       padding = -1,
+                       fontsize = 50
+                       ),
+
+                widget.TextBox(
+                        text = "  ",
+                        padding = 2,
+                        fontsize = 15, 
+                        mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('blueman-adapters')},
+                        **background_A
+                ),
+
+                widget.TextBox(
+                       text = '',
+                       background = colors[4],
+                       foreground = colors[5],
+                       padding = -1,
+                       fontsize = 50
+                       ),
+
+                widget.Battery(
+                        charge_char = " ",
+                        discharge_char = "",
+                        empty_char = "",
+                        full_char = "",
+                        low_foreground = colors[6],
+                        notify_below = 0.15,
+                        fontsize = 14,
+                        format = '{char} {percent:2.0%}', 
+                        update_interval = 1,
+                        **background_B
+                ),
+    
+                widget.TextBox(
+                       text = '',
+                       background = colors[5],
+                       foreground = colors[4],
+                       padding = -1,
+                       fontsize = 50
+                       ),
+
+                widget.TextBox(
+                        text = " ",
+                        padding = 0,
+                        fontsize = 14, 
+                        **background_A
+                ),
+                widget.Volume(
+                        padding = 5, 
+                        fontsize = 14,
+                        **background_A
+                        ),
+
+                widget.TextBox(
+                       text = '',
+                       background = colors[4],
+                       foreground = colors[5],
+                       padding = -1,
+                       fontsize = 50
+                       ),
+                
+                widget.TextBox(
+                        text = " ",
+                        padding = 2,
+                        fontsize = 14, 
+                        **background_B
+                        ),
+                widget.Pacman(
+                        update_interval = 1800,
+                        font = "Ubuntu Bold",
+                        **background_B
+                        ),
+                widget.TextBox(
+                        text = "Updates",
+                        padding = 5,
+                        font = "Ubuntu Bold",
+                        **background_B
+                        ),
+
+                widget.TextBox(
+                       text = '',
+                       background = colors[5],
+                       foreground = colors[4],
+                       padding = -1,
+                       fontsize = 50
+                       ),
+                
+                widget.Clock(
+                        format = " %A, %B %d  %H:%M ", 
+                        font = "Ubuntu Bold",
+                        **background_A
+                        ),
+
+                widget.TextBox(
+                       text = '',
+                       background = colors[4],
+                       foreground = colors[5],
+                       padding = -1,
+                       fontsize = 50,
+                       ),
+
+                widget.Systray(
+                        padding = 5,
+                        **background_B
+                        ),
+
+                widget.Sep(
+                        linewidth = 0,
+                        padding = 6, 
+                        **background_B
+                ),
+
+            ],
+            24,
+        ),
+    )
 ]
 
 # Drag floating layouts.
