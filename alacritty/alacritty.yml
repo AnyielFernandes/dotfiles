@@ -590,7 +590,7 @@ colors:
     white: '0xbfd5de'
     yellow: '0xffd47e'
   primary:
-    background: '0x0f101a'
+    background: '0x030208'
     foreground: '0xf1ffff'
 
 

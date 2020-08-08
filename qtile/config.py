@@ -34,6 +34,10 @@ import subprocess
 import json
 import os
 
+
+#Some useful variables
+home = path.expanduser('~')
+qtile_path = path.join(home, ".config", "qtile")
 myTerm = "alacritty"
 mod = "mod4"
 
@@ -104,7 +108,7 @@ keys = [
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
     Key([mod,"control"],"Escape",lazy.spawn("telinit 0")),
-    Key([mod], "r", lazy.spawn("dmenu_run")),
+    Key([mod], "r", lazy.spawn("rofi -show")),
 
     #Monitor commands: 
     Key([mod], "Escape", lazy.next_screen() ),
@@ -121,6 +125,9 @@ keys = [
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
     Key([mod],"F1", lazy.spawn("bash /home/anyel/.config/qtile/scripts/HDMI1_brightness.sh ")),
+    #Night light
+    Key([mod],"Up",lazy.spawn("redshift -Pg 0.8:0.7:0.8 -O 4800")), 
+    Key([mod],"Down",lazy.spawn("redshift -x")),
 
     #Bar
     Key([mod], "BackSpace" , lazy.hide_show_bar("top")),
@@ -149,9 +156,9 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 
 layout_conf = {
-    'border_focus': '#f5c4c4',
-    'border_width': 2,
-    'margin': 1
+    'border_focus': '#7691c4',
+    'border_width': 1,
+    'margin': 2
 }
 
 layouts = [
@@ -636,5 +643,8 @@ focus_on_window_activation = "smart"
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
 
+#Commands executed on qtile's startup 
+subprocess.call([path.join(qtile_path, 'autostart.sh')])
 os.system('~/.fehbg &')
 os.system('picom &')
+

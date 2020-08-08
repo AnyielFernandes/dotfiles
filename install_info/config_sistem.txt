@@ -18,6 +18,8 @@ Configuraciones del sistema:
 -FONDOS
     sudo pacman -S feh 
     feh --bg-scale /ruta/al/archivo-de-imagen
+    #Para doble monitor, un fondo distinto para cada monitor: 
+    feh --bg-center path/to/file/for/first/monitor path/to/file/for/second/monitor
 
 -AUDIO
     añadir usuario al grupo audio: 
@@ -80,8 +82,18 @@ https://wiki.archlinux.org/index.php/Desktop_notifications_(Espa%C3%B1ol)
 
 -Configuración de múltiples monitores con xranrd:
 configuración gráfica con arandr 
-ejemplo de configuración en terminal: xrandr --output eDP1 --primary --mode 1366x768 --pos 233x1080 --rotate normal --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal #las posiciones no son las correctas. 
+xrandr --output eDP1 --mode 1366x768 --pos 1920x233 --rotate normal --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal
+
+
 Si los cambios no se actualizan en qtile, o las pantallas no aparecen de manera independiente, reiniciar qtile. 
+
+
+#Configuración de los monitores de manera permanenete: utilizando el script autostart.sh en /home/anyel/.config/qtile  
+Con este scrip es necesario reiniciar qtile en el arranque para que todo funcione correctamente. 
+
+
+instalar scrot para poder realiozar capturas de pantalla: 
+    sudo pacman -S scrot
 
 
 
