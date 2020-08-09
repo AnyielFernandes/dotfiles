@@ -148,4 +148,8 @@ preff=exo-preferred-applications
 #    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 #fi
 
+
+#Aliases: 
+alias android_studio="/opt/android-studio/bin/studio.sh" 
+
 neofetch 

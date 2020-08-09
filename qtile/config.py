@@ -92,6 +92,7 @@ keys = [
     Key([mod], "Return", lazy.spawn("alacritty")),
     Key([mod], "f", lazy.spawn("firefox")),
     Key([mod], "c", lazy.spawn("code")),
+    Key([mod],"a",lazy.spawn("/opt/android-studio/bin/studio.sh")),
     Key([mod], "s", lazy.spawn("spotify")),
     Key([mod], "n", lazy.spawn("nautilus")),
     Key([mod], "d", lazy.spawn("discord")),
@@ -124,10 +125,12 @@ keys = [
     #Brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
-    Key([mod],"F1", lazy.spawn("bash /home/anyel/.config/qtile/scripts/HDMI1_brightness.sh ")),
+    Key([mod],"F1", lazy.spawn("bash /home/anyel/.config/qtile/scripts/HDMI1_brightness.sh =")),
+    Key([mod],"Up", lazy.spawn("bash /home/anyel/.config/qtile/scripts/HDMI1_brightness.sh +")),
+    Key([mod],"Down", lazy.spawn("bash /home/anyel/.config/qtile/scripts/HDMI1_brightness.sh -")),
     #Night light
-    Key([mod],"Up",lazy.spawn("redshift -Pg 0.8:0.7:0.8 -O 4800")), 
-    Key([mod],"Down",lazy.spawn("redshift -x")),
+    Key([mod],"Right",lazy.spawn("redshift -Pg 0.8:0.7:0.8 -O 4800")), 
+    Key([mod],"Left",lazy.spawn("redshift -x")),
 
     #Bar
     Key([mod], "BackSpace" , lazy.hide_show_bar("top")),
