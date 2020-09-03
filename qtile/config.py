@@ -109,6 +109,7 @@ keys = [
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
     Key([mod,"control"],"Escape",lazy.spawn("telinit 0")),
+    Key([mod,"control"],"s",lazy.spawn("systemctl suspend")),
     Key([mod], "r", lazy.spawn("rofi -show")),
 
     #Monitor commands: 
@@ -139,15 +140,15 @@ keys = [
 
 
 ##### GROUPS #####
-group_names = [("WWW", {'layout': 'max'}),
-               ("TERM", {'layout': 'monadtall'}),
-               ("CODE", {'layout': 'max'}),
-               ("FS", {'layout': 'monadtall'}),
-               ("MUSIC", {'layout': 'max'}),
-               ("CHAT", {'layout': 'max'}),
-               ("PDF", {'layout': 'stack'}),
-               ("DOC", {'layout' : 'max'}),
-               ("MISC", {'layout': 'max'}), ]
+group_names = [("", {'layout': 'max'}),
+               ("", {'layout': 'monadtall'}),
+               ("", {'layout': 'max'}),
+               ("", {'layout': 'monadtall'}),
+               ("", {'layout': 'max'}),
+               ("", {'layout': 'max'}),
+               ("", {'layout': 'stack'}),
+               ("", {'layout' : 'max'}),
+               ("", {'layout': 'max'}), ]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
 
@@ -234,7 +235,7 @@ screens = [
                         ),
                 widget.GroupBox(
                         font = "Ubuntu Bold",
-                        fontsize = 10,
+                        fontsize = 13,
                         margin_y = 3,
                         margin_x = 0,
                         padding_y = 5,
@@ -423,7 +424,7 @@ screens = [
                         ),
                 widget.GroupBox(
                         font = "Ubuntu Bold",
-                        fontsize = 10,
+                        fontsize = 13,
                         margin_y = 3,
                         margin_x = 0,
                         padding_y = 5,
@@ -647,7 +648,6 @@ focus_on_window_activation = "smart"
 wmname = "LG3D"
 
 #Commands executed on qtile's startup 
-subprocess.call([path.join(qtile_path, 'autostart.sh')])
 os.system('~/.fehbg &')
 os.system('picom &')
 

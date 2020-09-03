@@ -151,5 +151,6 @@ preff=exo-preferred-applications
 
 #Aliases: 
 alias android_studio="/opt/android-studio/bin/studio.sh" 
+alias suspend="systemctl suspend"
 
 neofetch 
