@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/home/anyel/.config/Code - OSS/User/workspaceStorage/9f5cb1b7d5f549e78ad7bf3495e08054/redhat.java/ss_ws/.metadata/.plugins/org.eclipse.jdt.core

@@ -1,0 +1,186 @@
+!SESSION 2020-08-15 00:44:14.932 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=14.0.1
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_ES
+Command-line arguments:  -data /home/anyel/.config/Code - OSS/User/workspaceStorage/9f5cb1b7d5f549e78ad7bf3495e08054/redhat.java/ss_ws
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:20.809
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:21.239
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:21.296
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:21.304
+!MESSAGE Initializing Java Language Server 0.59.0.202007221216
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:21.496
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:21.547
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:21.659
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:23.830
+!MESSAGE Workspace initialized in 2335ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:23.923
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:23.995
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:23.997
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:24.015
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:24.058
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:24.095
+!MESSAGE Creating the Java project Observer_db287666
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:24.145
+!MESSAGE Finished creating the Java project Observer_db287666
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:24.904
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:24.911
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:25.047
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:25.375
+!MESSAGE Reconciled 0. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:26.574
+!MESSAGE begin problem for /Subject.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:26.574
+!MESSAGE 0 problems reported for /Subject.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:26.578
+!MESSAGE Validated 1. Took 785 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:26.627
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:26.770
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:26.854
+!MESSAGE >> document/foldingRange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:27.096
+!MESSAGE Reconciled 0. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:27.664
+!MESSAGE begin problem for /Observer.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:27.665
+!MESSAGE 0 problems reported for /Observer.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:27.795
+!MESSAGE begin problem for /Subject.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:27.796
+!MESSAGE 0 problems reported for /Subject.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:27.839
+!MESSAGE Validated 2. Took 293 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:30.723
+!MESSAGE >> document/foldingRange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:32.283
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:32.306
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:32.374
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-15 00:44:32.489
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2020-08-16 00:19:23.379 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=14.0.1
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_ES
+Command-line arguments:  -data /home/anyel/.config/Code - OSS/User/workspaceStorage/9f5cb1b7d5f549e78ad7bf3495e08054/redhat.java/ss_ws
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:27.943
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:28.394
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:28.463
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:28.467
+!MESSAGE Initializing Java Language Server 0.59.0.202007221216
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:28.601
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:31.078
+!MESSAGE Workspace initialized in 2571ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:31.153
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:31.264
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:31.267
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:31.286
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:31.328
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:31.972
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:32.404
+!MESSAGE Reconciled 0. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:34.609
+!MESSAGE begin problem for /HeatIndexDisplay.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:34.611
+!MESSAGE 0 problems reported for /HeatIndexDisplay.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:34.618
+!MESSAGE Validated 1. Took 1764 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:35.343
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:35.356
+!MESSAGE Clearing problems for /HeatIndexDisplay.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:36.137
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:36.140
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:36.218
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-08-16 00:19:36.258
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
