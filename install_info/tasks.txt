@@ -1,5 +1,0 @@
-Configuraciones restantes: 
-	modo reposo al cerrar el ordenador
-	virtualBox
-	AndroidStudio
-	PDF con comandos
