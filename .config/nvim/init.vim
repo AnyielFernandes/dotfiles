@@ -42,3 +42,4 @@ let NERDTreeQuitOnOpen=1
 
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+
