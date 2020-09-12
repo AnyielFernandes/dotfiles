@@ -149,8 +149,40 @@ preff=exo-preferred-applications
 #fi
 
 
+#Variables
+VISUAL=nvim
+EDITOR=nvim
+
 #Aliases: 
 alias android_studio="/opt/android-studio/bin/studio.sh" 
 alias suspend="systemctl suspend"
+alias vi=nvim
+alias vim=nvim
+alias ..="cd .." 
+alias .=pwd
+alias gh='history|grep'
+alias lt='exa -Flrs size'
+alias ls='exa -F'
+alias ll='exa -Fls type' 
+alias ld='ll -D'
+alias lf='ll | grep -v "/$"'
 
+
+mkcd(){
+  if [ $# -ne 1 ]; then 
+    echo "Demasiados argumentos"
+    return 1
+  fi
+  mkdir -- "$1" && cd "$1"
+  return 0
+}
+
+
+
+
+
+
+
+
+#Run programs on start 
 neofetch 
