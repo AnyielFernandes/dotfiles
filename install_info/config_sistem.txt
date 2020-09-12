@@ -95,6 +95,11 @@ Con este scrip es necesario reiniciar qtile en el arranque para que todo funcion
 instalar scrot para poder realiozar capturas de pantalla: 
     sudo pacman -S scrot
 
+lightdm greeter
+instalar
 
+lightdm-webkit2-greeter
+lightdm-webkit-theme-litarvan
 
-
+especificar el greeter en la configuración de lighdm /etc/lightdm/lighdm.conf
+especificar el tema en la configuración del greeter 
