@@ -59,6 +59,59 @@ match_lhs=""
 	&& match_lhs=$(dircolors --print-database)
 [[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
 
+
+
+ # get current branch in git repo
+function parse_git_branch() {
+	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+	if [ ! "${BRANCH}" == "" ]
+	then
+		STAT=`parse_git_dirty`
+		echo "[${BRANCH}${STAT}]"
+	else
+		echo ""
+	fi
+}
+
+# get current status of git repo
+function parse_git_dirty {
+	status=`git status 2>&1 | tee`
+	dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
+	untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
+	ahead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
+	newfile=`echo -n "${status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?"`
+	renamed=`echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?"`
+	deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
+	bits=''
+	if [ "${renamed}" == "0" ]; then
+		bits=">${bits}"
+	fi
+	if [ "${ahead}" == "0" ]; then
+		bits="*${bits}"
+	fi
+	if [ "${newfile}" == "0" ]; then
+		bits="+${bits}"
+	fi
+	if [ "${untracked}" == "0" ]; then
+		bits="?${bits}"
+	fi
+	if [ "${deleted}" == "0" ]; then
+		bits="x${bits}"
+	fi
+	if [ "${dirty}" == "0" ]; then
+		bits="!${bits}"
+	fi
+	if [ ! "${bits}" == "" ]; then
+		echo " ${bits}"
+	else
+		echo ""
+	fi
+}
+
+function nonzero_return() {
+	RETVAL=$?
+	[ $RETVAL -ne 0 ] && echo "$RETVAL"
+}
 if ${use_color} ; then
 	# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
 	if type -P dircolors >/dev/null ; then
@@ -72,7 +125,10 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\]\h\[\033[01;36m\] \W\[\033[01;31m\]\$\[\033[00m\] '
 	else
-		PS1='\[\e[38;5;250m\]\[\e[48;5;240m\] \u \[\e[48;5;238m\]\[\[\e[48;5;31m\]\[\e[38;5;240m\]\[\e[38;5;15m\]\[\e[48;5;31m\] \W \[\e[48;5;236m\]\[\e[38;5;31m\]\[\e[38;5;15m\]\[\e[48;5;236m\] \$ \[\e[0m\]\[\e[38;5;236m\]\[\e[0m\]'
+		#PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+
+
+		export PS1="\[\033[100m\]\[\033[95m\][\[\033[01;32m\]\u\[\e[34m\] \w \[\e[31m\] (\`nonzero_return\`)\[\033[01;32m\]\[\033[95m\]]\[\e[32m\] \`parse_git_branch\` \[\e[36m\]{\d\\[\e[36m\] \A}\033[K\n\[\033[00m\]" 
 	fi
 
 	alias ls='ls --color=auto'
@@ -139,14 +195,6 @@ ex ()
 }
 preff=exo-preferred-applications
 
-#powerline-shell
-#function _update_ps1() {
-#    PS1=$(powerline-shell $?)
-#}
-
-#if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi
 
 
 #Variables
@@ -166,7 +214,14 @@ alias ls='exa -F'
 alias ll='exa -Fls type' 
 alias ld='ll -D'
 alias lf='ll | grep -v "/$"'
+alias pacyyu='sudo pacman -Syyu'
 
+#Acceso rápido a directorios de asignatura
+alias ia='cd ~/allpha/5c/IA'
+alias sd='cd ~/allpha/5c/SD'
+alias si='cd ~/allpha/5c/SI'
+alias is='cd ~/allpha/5c/IS'
+alias ph='cd ~/allpha/5c/PH'
 
 mkcd(){
   if [ $# -ne 1 ]; then 
@@ -176,7 +231,6 @@ mkcd(){
   mkdir -- "$1" && cd "$1"
   return 0
 }
-
 
 
 
