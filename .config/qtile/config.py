@@ -110,7 +110,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown()),
     Key([mod,"control"],"Escape",lazy.spawn("systemctl poweroff")),
     Key([mod,"control"],"s",lazy.spawn("systemctl suspend")),
-    Key([mod], "r", lazy.spawn("rofi -show")),
+    Key([mod], "r", lazy.spawn("rofi -show drun")),
 
     #Monitor commands: 
     Key([mod], "Escape", lazy.next_screen() ),
@@ -160,9 +160,9 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 
 layout_conf = {
-    'border_focus': '#7691c4',
+    'border_focus': '#ffffff',
     'border_width': 1,
-    'margin': 4
+    'margin':3 
 }
 
 layouts = [
