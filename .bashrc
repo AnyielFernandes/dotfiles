@@ -215,6 +215,9 @@ alias ll='exa -Fls type'
 alias ld='ll -D'
 alias lf='ll | grep -v "/$"'
 alias pacyyu='sudo pacman -Syyu'
+alias myps="ps -u ${USER}"
+alias cd-="cd ~-"
+alias cd+="cd ~+"
 
 #Acceso rápido a directorios de asignatura
 alias ia='cd ~/allpha/5c/IA'
