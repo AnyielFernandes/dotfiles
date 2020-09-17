@@ -1,7 +1,6 @@
 # configs
-Almost every configuration file i'm currently using.
-This configurations would not work out of the box, there are some programs that must be installed. 
-List of required programs: 
+Most of my configuration files. 
+List of required programs for general config: 
 	nautilus
 	libreoffice
 	spotify
@@ -12,10 +11,19 @@ List of required programs:
 	python-pip
 	neofetch
 	feh
-	brightnessctl
 	otf-font-awesome
 	rm-connection-editor
 	blueman-adapters	
 	picom
 	dmenu
+	scrot
+	neofetch 
+	neovim 
+	vscode
+	qtile
+	some nerd-fonts
+	rofi
+	redshift
+	Ranger
+
 

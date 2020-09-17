@@ -1,7 +1,0 @@
-/home/anyel/allpha/configs
-/home/anyel/.config/alacritty
-/home/anyel/.config/qtile
-/home/anyel/.bashrc
-/home/anyel/allpha/install_info
-/etc/X11/xorg.conf.d/30-touchpad.conf
-/lib/notify_low_battery.sh 

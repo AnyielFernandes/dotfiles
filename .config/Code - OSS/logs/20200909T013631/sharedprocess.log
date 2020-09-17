@@ -1,8 +1,0 @@
-[2020-09-09 01:36:35.327] [sharedprocess] [info] main {"machineId":"42ca4121c68a44295a476644758230c9e0834b9196f8f711a290c107d079cf27","windowId":2}
-[2020-09-09 01:36:37.417] [sharedprocess] [info] Installing extension: vscjava.vscode-java-test
-[2020-09-09 01:36:38.647] [sharedprocess] [info] Downloaded extension: vscjava.vscode-java-test /home/anyel/.config/Code - OSS/CachedExtensionVSIXs/vscjava.vscode-java-test-0.24.2
-[2020-09-09 01:36:38.799] [sharedprocess] [info] Extracted extension to /home/anyel/.vscode-oss/extensions/.vscjava.vscode-java-test-0.24.2: vscjava.vscode-java-test
-[2020-09-09 01:36:38.799] [sharedprocess] [info] Renamed to /home/anyel/.vscode-oss/extensions/vscjava.vscode-java-test-0.24.2
-[2020-09-09 01:36:38.800] [sharedprocess] [info] Installation completed. vscjava.vscode-java-test
-[2020-09-09 01:36:38.845] [sharedprocess] [info] Extensions installed successfully: vscjava.vscode-java-test
-[2020-09-09 01:37:15.345] [sharedprocess] [info] Starting to clean up unused language packs.
