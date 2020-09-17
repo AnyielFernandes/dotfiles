@@ -512,10 +512,10 @@ key_bindings:
   - { key: Add,      mods: Control,       action: IncreaseFontSize }
   - { key: Subtract, mods: Control,       action: DecreaseFontSize }
   #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
-  - { key: Up,       mods: Control,       action: ScrollLineUp }
-  - { key: Down,       mods: Control,       action: ScrollLineDown }
-  - { key: Up,       mods: Control|Shift,       action: ScrollPageUp }
-  - { key: Down,       mods: Control|Shift,       action: ScrollPageDown }
+  - { key: K,       mods: Control,       action: ScrollLineUp }
+  - { key: J,       mods: Control,       action: ScrollLineDown }
+  - { key: U,       mods: Control,       action: ScrollPageUp }
+  - { key: D,       mods: Control,       action: ScrollPageDown }
 
 
 
