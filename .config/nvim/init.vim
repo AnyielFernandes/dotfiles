@@ -7,7 +7,7 @@ set showcmd
 set ruler 
 set encoding=utf-8
 set showmatch
-"set sw=2
+set sw=4
 set relativenumber
 set laststatus=2
 set noshowmode
@@ -20,19 +20,19 @@ Plug 'tomasiser/vim-code-dark'
 " IDE
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mkitt/tabline.vim'
 Plug 'bling/vim-bufferline'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Yggdroot/indentLine'
 "Plug 'zefei/vim-wintabs'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -44,6 +44,7 @@ Plug 'fatih/vim-go', { 'tag':'v1.22', 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 colorscheme codedark
+set background=dark
 
 "vim-go
 let g:go_fmt_autosave = 0
@@ -58,9 +59,13 @@ let g:airline#extension#tabline#enabled = 1
 let g:airline#extension#tabline#fnamemod = ':t'
 "let g:airline_powerline_fonts = 1
 
-"IndentLine
-let g:indentLine_fileTypeExclude = [ 'text', 'sh', 'help', 'terminal' ]
-let g:indentLine_bufNameExclude = [ 'NERD_tree.*', 'term:*' ]
+"indentLine
+let g:indentLine_enabled = 0
+let g:indentLine_conceallevel = 1 
+let g:indentLine_char = '¦'
+let g:indentLine_color_term = 239
+
+
 
 "ALE
 let g:ale_echo_msg_error_str = 'E'
@@ -105,8 +110,8 @@ vmap ' $
 map <C-s> :w<CR>
 nmap <C-l> :noh<CR>
 vmap <C-l> :noh<CR>
-nmap ¡ %
-vmap ¡ %
+nmap ñ %
+vmap ñ %
 
 
 "Move between splits
@@ -159,14 +164,17 @@ noremap <leader>bb :bnext<CR>
 "=============================================COC-Extensions=========================================================
 "====================================================================================================================
 let g:coc_global_extensions = [
-  \ 'coc-pairs',
+  "\ 'coc-pairs',
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
   \ 'coc-go','coc-python','coc-clangd']
 
 
-" from readme
+
+
+
+"from readme
 " if hidden is not set, TextEdit might fail.
 set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300
