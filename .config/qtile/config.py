@@ -266,7 +266,7 @@ myBar = [ widget.Sep(
                         this_current_screen_border = colors[3],
                         this_screen_border = colors [8],
                         other_current_screen_border = colors[0],
-                        other_screen_border = colors[0],
+                        other_screen_border = colors[8],
                         foreground = colors[2],
                         background = colors[0]
                         ),
@@ -481,7 +481,7 @@ screens = [
                         this_current_screen_border = colors[3],
                         this_screen_border = colors [8],
                         other_current_screen_border = colors[0],
-                        other_screen_border = colors[0],
+                        other_screen_border = colors[8],
                         foreground = colors[2],
                         background = colors[0]
                         ),
