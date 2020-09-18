@@ -7,7 +7,7 @@ set showcmd
 set ruler 
 set encoding=utf-8
 set showmatch
-set sw=2
+"set sw=2
 set relativenumber
 set laststatus=2
 set noshowmode
@@ -23,9 +23,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-"Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -37,6 +34,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'mkitt/tabline.vim'
 Plug 'bling/vim-bufferline'
 "Plug 'zefei/vim-wintabs'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plug 'ryanoasis/vim-devicons'
+
 "Go specific support
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -79,7 +80,8 @@ vmap ' $
 map <C-s> :w<CR>
 nmap <C-l> :noh<CR>
 vmap <C-l> :noh<CR>
-
+nmap 5 %
+vmap 5 %
 "File management 
 "Interesting commands: 
 " 	:cd
