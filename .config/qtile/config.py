@@ -92,7 +92,6 @@ keys = [
     Key([mod], "Return", lazy.spawn("alacritty")),
     Key([mod], "f", lazy.spawn("firefox")),
     Key([mod], "c", lazy.spawn("code")),
-    Key([mod],"a",lazy.spawn("/opt/android-studio/bin/studio.sh")),
     Key([mod], "s", lazy.spawn("spotify")),
     Key([mod], "n", lazy.spawn("nautilus")),
     Key([mod], "d", lazy.spawn("discord")),
@@ -184,12 +183,12 @@ layouts = [
 
 
 ##### COLORS #####
-colors = [["#292d3e"], # panel background 0
+colors = [["#13001f"], # panel background 0
           ["#434758"], # background for current screen tab 1
           ["#ffffff"], # font color for group names 2
           ["#ff5555"], # border line color for current tab 3
-          ["#9c065c"], # border line color for other tab and odd widgets 4
-          ["#870130"], # color for the even widgets 5
+          ["#00294a"], # border line color for other tab and odd widgets 4
+          ["#1e3a61"], # color for the even widgets 5
           ["#e1acff"], # window name 6
           ["#858585"]] # color for non active windows 7
 
@@ -223,14 +222,31 @@ separator_B = widget.TextBox(
 background_B = { 'background' : colors[5],
                  'foreground' : colors[2]}
 
-screens = [
-    Screen(
-        top=bar.Bar(
-            [
-                widget.Sep(
+background_C = { 'background' : colors[0],
+                 'foreground' : colors[2]}
+
+myBar = [ widget.Sep(
                         linewidth = 0,
                         padding = 6,
                         foreground = colors[2],
+                        background = colors[0]
+                        ),
+                widget.Image(
+                    background = colors[0],
+                    filename = "/home/anyel/.config/qtile/icons/Manjaro_Icon.svg",
+                    mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('/home/anyel/.config/xmenu/xmenu.sh')},
+                    margin = 3 
+                    ),
+                widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[7],
+                        background = colors[0]
+                        ),
+                widget.Sep(
+                        linewidth = 0,
+                        padding = 7,
+                        foreground = colors[7],
                         background = colors[0]
                         ),
                 widget.GroupBox(
@@ -239,7 +255,7 @@ screens = [
                         margin_y = 3,
                         margin_x = 0,
                         padding_y = 5,
-                        padding_x = 3,
+                        padding_x = 6,
                         borderwidth = 3,
                         active = colors[2],
                         inactive = colors[7],
@@ -391,23 +407,32 @@ screens = [
                 widget.TextBox(
                        text = '',
                        background = colors[4],
-                       foreground = colors[5],
+                       foreground = colors[0],
                        padding = -1,
                        fontsize = 50,
                        ),
 
                 widget.Systray(
                         padding = 5,
-                        **background_B
+                        **background_C
                         ),
 
                 widget.Sep(
                         linewidth = 0,
                         padding = 6, 
-                        **background_B
+                        **background_C
                 ),
 
-            ],
+            ]
+
+
+
+
+screens = [
+    Screen(
+        top=bar.Bar(
+            myBar
+            ,
             24,
         ),
     ),
@@ -415,11 +440,28 @@ screens = [
     # Screen 2 
     Screen(
         top=bar.Bar(
-            [
-                widget.Sep(
+                [ widget.Sep(
                         linewidth = 0,
                         padding = 6,
                         foreground = colors[2],
+                        background = colors[0]
+                        ),
+                widget.Image(
+                    background = colors[0],
+                    filename = "/home/anyel/.config/qtile/icons/Manjaro_Icon.svg",
+                    mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('/home/anyel/.config/xmenu/xmenu.sh')},
+                    margin = 3 
+                    ),
+                widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[7],
+                        background = colors[0]
+                        ),
+                widget.Sep(
+                        linewidth = 0,
+                        padding = 7,
+                        foreground = colors[7],
                         background = colors[0]
                         ),
                 widget.GroupBox(
@@ -428,7 +470,7 @@ screens = [
                         margin_y = 3,
                         margin_x = 0,
                         padding_y = 5,
-                        padding_x = 3,
+                        padding_x = 6,
                         borderwidth = 3,
                         active = colors[2],
                         inactive = colors[7],
@@ -580,23 +622,24 @@ screens = [
                 widget.TextBox(
                        text = '',
                        background = colors[4],
-                       foreground = colors[5],
+                       foreground = colors[0],
                        padding = -1,
                        fontsize = 50,
                        ),
 
                 widget.Systray(
                         padding = 5,
-                        **background_B
+                        **background_C
                         ),
 
                 widget.Sep(
                         linewidth = 0,
                         padding = 6, 
-                        **background_B
+                        **background_C
                 ),
 
-            ],
+            ]
+            ,
             24,
         ),
     )
