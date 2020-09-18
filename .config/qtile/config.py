@@ -186,11 +186,12 @@ layouts = [
 colors = [["#13001f"], # panel background 0
           ["#434758"], # background for current screen tab 1
           ["#ffffff"], # font color for group names 2
-          ["#ff5555"], # border line color for current tab 3
-          ["#00294a"], # border line color for other tab and odd widgets 4
+          ["#9d00ff"], # border line color for current tab 3
+          ["#00294a"], # odd widgets 4
           ["#1e3a61"], # color for the even widgets 5
           ["#e1acff"], # window name 6
-          ["#858585"]] # color for non active windows 7
+          ["#858585"], # color for non active windows 7
+          ["#6900ab"]] # color for selected group on non selected screen 8
 
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = dict(
@@ -263,7 +264,7 @@ myBar = [ widget.Sep(
                         highlight_color = colors[1],
                         highlight_method = "line",
                         this_current_screen_border = colors[3],
-                        this_screen_border = colors [4],
+                        this_screen_border = colors [8],
                         other_current_screen_border = colors[0],
                         other_screen_border = colors[0],
                         foreground = colors[2],
@@ -478,7 +479,7 @@ screens = [
                         highlight_color = colors[1],
                         highlight_method = "line",
                         this_current_screen_border = colors[3],
-                        this_screen_border = colors [4],
+                        this_screen_border = colors [8],
                         other_current_screen_border = colors[0],
                         other_screen_border = colors[0],
                         foreground = colors[2],
