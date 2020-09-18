@@ -39,25 +39,40 @@ Plug 'bling/vim-bufferline'
 "Plug 'ryanoasis/vim-devicons'
 
 "Go specific support
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'tag':'v1.22', 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
 colorscheme codedark
+
+"vim-go
+let g:go_fmt_autosave = 0
+let g:go_asmfmt_autosave = 0
+let g:go_mod_fmt_autosave = 0
+let g:go_auto_sameids = 0 
+let g:go_auto_info = 0 
+
+"Airline
 let g:airline_theme='minimalist'
 let g:airline#extension#tabline#enabled = 1
 let g:airline#extension#tabline#fnamemod = ':t'
 "let g:airline_powerline_fonts = 1
 
+"IndentLine
 let g:indentLine_fileTypeExclude = [ 'text', 'sh', 'help', 'terminal' ]
 let g:indentLine_bufNameExclude = [ 'NERD_tree.*', 'term:*' ]
 
+"ALE
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0 
 
+"Bufferline
+let g:bufferline_echo = 0 
+
+"Shortcuts
 let mapleader=" " 
 nmap <Leader>s <Plug>(easymotion-s2) 
 nmap <Leader>nt :NERDTreeFind<CR> 
@@ -66,10 +81,20 @@ nmap <Leader>/ <Plug>NERDCommenterToggle
 vmap <Leader>/ <Plug>NERDCommenterToggle
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIgnore = ['^node_modules$' ]
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-nmap <Leader>j <Plug>(ale_previous_wrap)
-nmap <Leader>k <Plug>(ale_next_wrap)
+nmap <Leader>J <Plug>(ale_previous_wrap)
+nmap <Leader>K <Plug>(ale_next_wrap)
+nmap <Leader>Go :GoRun<CR>
 
+
+"Useful commands: 
+":sp filename 	Open filename in horizontal split
+":vsp filename 	Open filename in vertical split
+"Ctrl-w h Ctrl-w ← 	Shift focus to split on left of current
+"Ctrl-w l Ctrl-w → 	Shift focus to split on right of current
+"Ctrl-w j Ctrl-w ↓ 	Shift focus to split below the current
+"Ctrl-w k Ctrl-w ↑ 	Shift focus to split above the current
+"Ctrl-w n+ 	Increase size of current split by n lines
+"Ctrl-w n- 	Decrease size of current split by n lines
 
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
@@ -80,8 +105,20 @@ vmap ' $
 map <C-s> :w<CR>
 nmap <C-l> :noh<CR>
 vmap <C-l> :noh<CR>
-nmap 5 %
-vmap 5 %
+nmap ¡ %
+vmap ¡ %
+
+
+"Move between splits
+nmap <Leader>+ <C-w>+
+nmap <Leader>- <C-w>-
+nmap <Leader>= <C-w>=
+nmap <Leader>j <C-w>j
+nmap <Leader>k <C-w>k
+nmap <Leader>h <C-w>h
+nmap <Leader>l <C-w>l
+
+
 "File management 
 "Interesting commands: 
 " 	:cd
@@ -91,8 +128,8 @@ vmap 5 %
 " 	gt
 nmap <Leader>fz :Files<CR> 
 "  Go to tab by number
-map <C-w> gt
-map <C-q> gT
+map <C-n> gt
+map <C-m> gT
 nmap <Leader>vim :tabnew /home/anyel/.config/nvim/init.vim<CR>
 noremap <leader>1 1gt
 noremap <leader>2 2gt
@@ -126,7 +163,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
-  \ ]
+  \ 'coc-go','coc-python','coc-clangd']
 
 
 " from readme
