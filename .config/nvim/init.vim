@@ -60,8 +60,8 @@ let g:airline#extension#tabline#fnamemod = ':t'
 "let g:airline_powerline_fonts = 1
 
 "indentLine
-let g:indentLine_enabled = 0
-let g:indentLine_conceallevel = 1 
+let g:indentLine_enabled = 1 
+let g:indentLine_conceallevel = 2 
 let g:indentLine_char = '¦'
 let g:indentLine_color_term = 239
 
@@ -89,6 +89,7 @@ let g:NERDTreeIgnore = ['^node_modules$' ]
 nmap <Leader>J <Plug>(ale_previous_wrap)
 nmap <Leader>K <Plug>(ale_next_wrap)
 nmap <Leader>Go :GoRun<CR>
+nmap <Leader>il :IndentLinesToggle<CR>
 
 
 "Useful commands: 
