@@ -514,8 +514,8 @@ key_bindings:
   #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
   - { key: K,       mods: Control,       action: ScrollLineUp }
   - { key: J,       mods: Control,       action: ScrollLineDown }
-  - { key: U,       mods: Control,       action: ScrollPageUp }
-  - { key: D,       mods: Control,       action: ScrollPageDown }
+  - { key: K,       mods: Control|Shift,       action: ScrollPageUp }
+  - { key: J,       mods: Control|Shift,       action: ScrollPageDown }
 
 
 
@@ -569,7 +569,7 @@ key_bindings:
   #print_events: false
 
 
-background_opacity: 0.88 
+background_opacity: 0.85 
 colors:
   bright:
     black: '0x282a40'
