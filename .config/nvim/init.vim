@@ -41,6 +41,9 @@ Plug 'Yggdroot/indentLine'
 "Go specific support
 Plug 'fatih/vim-go', { 'tag':'v1.22', 'do': ':GoUpdateBinaries' }
 
+"Java language server
+Plug 'artur-shaik/vim-javacomplete2'
+
 call plug#end()
 
 colorscheme codedark
@@ -159,6 +162,10 @@ noremap <leader>b7 :7b<CR>
 noremap <leader>b8 :8b<CR>
 noremap <leader>b9 :9b<CR>
 noremap <leader>bb :bnext<CR>
+
+"Javacomplete2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
 
 
 "====================================================================================================================
