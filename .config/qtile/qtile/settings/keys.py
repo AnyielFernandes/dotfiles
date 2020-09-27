@@ -4,6 +4,13 @@ from libqtile.command import lazy
 myTerm = "alacritty"
 mod = "mod4"
 
+def switch_screens():
+    @lazy.function
+    def __inner(qtile):
+        i = qtile.screens.index(qtile.current_screen)
+        group = qtile.screens[i - 1].group
+        qtile.current_screen.set_group(group)
+    return __inner
 
 keys = [
     ### Window controls
@@ -77,6 +84,7 @@ keys = [
 
     #Monitor commands: 
     Key([mod], "Escape", lazy.next_screen() ),
+    Key([mod], "a",switch_screens() ),
 
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
