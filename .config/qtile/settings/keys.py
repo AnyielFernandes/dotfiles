@@ -55,10 +55,7 @@ keys = [
     # Swap panes of split stack
     Key([mod, "shift"], "space", lazy.layout.rotate()),
 
-    # Toggle between split and unsplit sides of stack.
-    # Split = all windows displayed
-    # Unsplit = 1 window displayed, like Max layout, but still with
-    # multiple stack panes
+    #Program shortcuts
     Key([mod, "shift"], "Return", lazy.layout.toggle_split()),
     Key([mod], "Return", lazy.spawn("alacritty")),
     Key([mod], "f", lazy.spawn("firefox")),
@@ -68,19 +65,20 @@ keys = [
     Key([mod], "d", lazy.spawn("discord")),
     Key([mod, "shift" ], "w", lazy.spawn("libreoffice --writer")),
     Key([mod],"v",lazy.spawn("virtualbox")),
+    Key([mod], "r", lazy.spawn("rofi -show drun")),
+    Key([],"Print", lazy.spawn("xfce4-screenshooter")),
 
     # Toggle between different layouts as defined below
     Key([mod], "q", lazy.next_layout()),
     Key([mod], "Tab", lazy.prev_layout()),
     Key([mod], "w", lazy.window.kill()),
 
-    # Swap panes of split stack
+    #Control-commands
     Key([mod, "shift"], "space", lazy.layout.rotate()),
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
     Key([mod,"control"],"Escape",lazy.spawn("systemctl poweroff")),
     Key([mod,"control"],"s",lazy.spawn("systemctl suspend")),
-    Key([mod], "r", lazy.spawn("rofi -show drun")),
 
     #Monitor commands: 
     Key([mod], "0", lazy.next_screen() ),
