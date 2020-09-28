@@ -12,5 +12,6 @@ fi
 #It removes every tmp file in the qtile scripts directory
 scripts_dir="/home/anyel/.config/qtile/scripts"
 find "$scripts_dir" -name "*.tmp" -exec rm {} \;   
+
 picom & 
-/home/anyel/.fehbg &
+feh --bg-scale --randomize /home/anyel/backgrounds
