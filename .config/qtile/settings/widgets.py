@@ -51,7 +51,7 @@ workspaces = lambda: [
                     background = colors[0],
                     filename = "/home/anyel/.config/qtile/icons/Manjaro_Icon.svg",
                     mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('/home/anyel/.config/xmenu/xmenu.sh')},
-                    margin = 3
+                    margin = 1
                     ),
                 widget.Sep(
                         linewidth = 1,

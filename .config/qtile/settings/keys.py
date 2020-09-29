@@ -1,3 +1,4 @@
+import datetime
 from libqtile.config import Key
 from libqtile.command import lazy
 
@@ -67,7 +68,10 @@ keys = [
     Key([mod],"v",lazy.spawn("virtualbox")),
     Key([mod], "r", lazy.spawn("rofi -show drun")),
     Key([],"Print", lazy.spawn("xfce4-screenshooter")),
-    Key([mod], "F5", lazy.spawn("python /home/anyel/.config/qtile/scripts/spotify_now_playing.py")),
+
+    #Random notifications
+    Key([mod], "F5", lazy.spawn("/home/anyel/.config/qtile/scripts/spotify_now_playing.py")),
+    Key([mod], "F6", lazy.spawn("notify-send -u 'low' '" + datetime.datetime.now().strftime("%c") + "'")),
 
     # Toggle between different layouts as defined below
     Key([mod], "q", lazy.next_layout()),
