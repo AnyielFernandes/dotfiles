@@ -103,22 +103,22 @@ main_widgets = [
             scale = 0.7, 
             **base(colors[2],colors[4]), 
             ),
-        powerline(colors[5],colors[4]), 
-        widget.TextBox(
-            text = "  ",
-            padding = 0,
-            fontsize = 15, 
-            mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('nm-connection-editor')},
-            **base(colors[2],colors[5])
-            ),
-        powerline(colors[4],colors[5]), 
-        widget.TextBox(
-            text = "  ",
-            padding = 2,
-            fontsize = 15, 
-            mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('blueman-adapters')},
-            **base(colors[2],colors[4])
-        ),
+        # powerline(colors[5],colors[4]), 
+        # widget.TextBox(
+            # text = "  ",
+            # padding = 0,
+            # fontsize = 15, 
+            # mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('nm-connection-editor')},
+            # **base(colors[2],colors[5])
+            # ),
+        # powerline(colors[4],colors[5]), 
+        # widget.TextBox(
+            # text = "  ",
+            # padding = 2,
+            # fontsize = 15, 
+            # mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('blueman-adapters')},
+            # **base(colors[2],colors[4])
+        # ),
         powerline(colors[5],colors[4]), 
         widget.Battery(
             charge_char = " ",
@@ -142,18 +142,12 @@ main_widgets = [
         powerline(colors[5],colors[4]),
         widget.TextBox(
             text = " ",
-            padding = 2,
+            padding = 0,
             fontsize = 14, 
             **base(colors[2],colors[5])
         ),
         widget.Pacman(
             update_interval = 1800,
-            font = "Ubuntu Bold",
-            **base(colors[2],colors[5])
-        ),
-        widget.TextBox(
-            text = "Updates",
-            padding = 5,
             font = "Ubuntu Bold",
             **base(colors[2],colors[5])
         ),
@@ -183,22 +177,7 @@ secondary_widgets = [
             **base(colors[2],colors[4]), 
             ),
         powerline(colors[5],colors[4]), 
-        widget.TextBox(
-            text = "  ",
-            padding = 0,
-            fontsize = 15, 
-            mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('nm-connection-editor')},
-            **base(colors[2],colors[5])
-            ),
-        powerline(colors[4],colors[5]), 
-        widget.TextBox(
-            text = "  ",
-            padding = 2,
-            fontsize = 15, 
-            mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('blueman-adapters')},
-            **base(colors[2],colors[4])
-        ),
-        powerline(colors[5],colors[4]), 
+         
         widget.Battery(
             charge_char = " ",
             discharge_char = "",
@@ -219,30 +198,12 @@ secondary_widgets = [
             **base(colors[2],colors[4])
         ),
         powerline(colors[5],colors[4]),
-        widget.TextBox(
-            text = " ",
-            padding = 2,
-            fontsize = 14, 
-            **base(colors[2],colors[5])
-        ),
-        widget.Pacman(
-            update_interval = 1800,
-            font = "Ubuntu Bold",
-            **base(colors[2],colors[5])
-        ),
-        widget.TextBox(
-            text = "Updates",
-            padding = 5,
-            font = "Ubuntu Bold",
-            **base(colors[2],colors[5])
-        ),
-        powerline(colors[4],colors[5]), 
         widget.Clock(
-            format = " %A, %B %d  %H:%M ", 
+            format = " %H:%M ", 
             font = "Ubuntu Bold",
-            **base(colors[2],colors[4])
+            **base(colors[2],colors[5])
         ),
-        powerline(colors[0],colors[4]), 
+        powerline(colors[0],colors[5]), 
         widget.Systray(
             padding = 5,
             **base(colors[2],colors[0])
@@ -253,6 +214,3 @@ secondary_widgets = [
             **base(colors[2],colors[0])
         )
     ]
-
-
-

@@ -3,7 +3,7 @@ from libqtile.config import Screen
 from libqtile import bar
 from settings.widgets import main_widgets, secondary_widgets
 
-status_bar = lambda widgets: bar.Bar(widgets,22,opacity = 1)
+status_bar = lambda widgets: bar.Bar(widgets,18,opacity = 1)
 
 screens = [Screen(top=status_bar(main_widgets))]
 

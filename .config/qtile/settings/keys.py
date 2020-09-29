@@ -67,6 +67,7 @@ keys = [
     Key([mod],"v",lazy.spawn("virtualbox")),
     Key([mod], "r", lazy.spawn("rofi -show drun")),
     Key([],"Print", lazy.spawn("xfce4-screenshooter")),
+    Key([mod], "F5", lazy.spawn("python /home/anyel/.config/qtile/scripts/spotify_now_playing.py")),
 
     # Toggle between different layouts as defined below
     Key([mod], "q", lazy.next_layout()),
