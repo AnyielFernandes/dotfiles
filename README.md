@@ -1,5 +1,6 @@
-# configs
-Most of my configuration files. 
+# Qtile
+![Qtile](screenshot.png)
+# Software list
 List of required programs for general config: 
 	nautilus
 	libreoffice
@@ -25,5 +26,6 @@ List of required programs for general config:
 	rofi
 	redshift
 	Ranger
+	
 
 
