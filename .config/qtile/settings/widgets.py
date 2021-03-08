@@ -146,7 +146,7 @@ main_widgets = [
             fontsize = 14, 
             **base(colors[2],colors[5])
         ),
-        widget.Pacman(
+        widget.CheckUpdates(
             update_interval = 1800,
             font = "Ubuntu Bold",
             **base(colors[2],colors[5])

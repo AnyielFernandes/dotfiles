@@ -91,8 +91,8 @@ keys = [
 
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set 'Master' 10%-")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set 'Master' 10%+")), 
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set 'Master' 3%-")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set 'Master' 3%+")), 
     Key([], "XF86AudioPlay", lazy.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")),
     Key([], "XF86AudioNext", lazy.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")),
     Key([], "XF86AudioPrev", lazy.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")),
